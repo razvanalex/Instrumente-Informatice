@@ -1,0 +1,68 @@
+\documentclass{article}
+\usepackage{enumerate}
+
+\renewcommand{\contentsname}{Cuprins}
+\title{Tehnologii WI-FI}
+\author{Sm\u adu R\u azvan-Alexandru}
+\date{17.03.2017}
+\begin{document}
+\maketitle
+\tableofcontents
+\vspace{2cm}
+\section{Introducere}
+\hspace{1cm}Wi-Fi (pronun\c tat \^{\i}n englez\u a /ˈwaifai/) este numele comercial pentru tehno\-logiile construite pe baza standardelor de comunica\c tie din familia IEEE 802.11 utilizate pentru realizarea de re\c tele locale de comunica\c tie (LAN) f\u ar\u a fir (wireless, WLAN) la viteze echivalente cu cele ale re\c telelor cu fir electric de tip Ethernet. Suportul pentru Wi-Fi este furnizat de diferite dispozitive hardware, \c si de aproape toate sistemele de operare moderne pentru calculatoarele personale (PC), rutere, telefoane mobile, console de jocuri \c si cele mai avansate televizoare. \par
+Standardul IEEE 802.11 descrie protocoale de comunica\c tie aflate la nivelul gazd\u a-re\c tea al Modelului TCP/IP, respectiv la nivelurile fizic \c si leg\u atur\u a de date ale Modelului OSI. Aceasta \^{\i}nseamn\u a c\u a implement\u arile IEEE 802.11 trebuie s\u a primeasc\u a pachete de la protocoalele de la nivelul re\c tea (IP) \c si s\u a se ocupe cu transmiterea lor, evit\^and eventualele coliziuni cu alte sta\c tii care doresc s\u a transmit\u a. \par
+802.11 face parte dintr-o familie de standarde pentru comunica\c tiile \^{\i}n re\c tele locale, elaborate de IEEE, \c si din care mai fac parte standarde pentru alte feluri de re\c tele, inclusiv standardul 802.3, pentru Ethernet. Cum Ethernet era din ce \^{\i}n ce mai popular la jum\u atatea anilor 1990, s-au depus eforturi ca noul standard s\u a fie compatibil cu acesta, din punctul de vedere al transmiterii pachetelor. \par
+\section {Istoric}
+Standardul a fost elaborat de IEEE \^{\i}n anii 1990, prima versiune a lui fiind definitivat\u a \^{\i}n 1997. Acea versiune nu mai este folosit\u a de implementatori, versiunile mai noi \c si \^{\i}mbun\u at\u a\c tite 802.11a/b/g fiind publicate \^{\i}ntre 1999 \c si 2001. Din 2004 se lucreaz\u a la o nou\u a versiune, intitulat\u a 802.11n \c si care, de\c si nu a fost definitivat\u a, este deja implementat\u a de unii furnizori de echipamente. \par
+\section{Securitate}
+Din punct de vedere al securit\u a\c tii, IEEE \c si Wi-Fi Alliance recomand\u a utilizarea standardului de securitate 802.11i, respectiv a schemei WPA2. Alte tehnici simple de control al accesului la o re\c tea 802.11 sunt considerate nesigure, cum este \c si schema WEP, dependent\u a de un algoritm de criptare simetric\u a, RC4, nesigur.
+\section{Limit\u ari}
+Limit\u arile standardului provin din mediul f\u ar\u a fir folosit, care face ca re\c telele IEEE 802.11 s\u a fie mai lente dec\^at cele cablate, de exemplu Ethernet, dar \c si din folosirea benzii de frecven\c t\u a de 2,4 GHz, \^{\i}mp\u ar\c tit\u a \^{\i}n 12 canale care se suprapun par\c tial dou\u a c\^ate dou\u a. Limit\u arile date de consumul mare de energie, precum \c si de reglement\u arile privind puterea electromagnetic\u a emis\u a, nu permit arii de acoperire mai mari de c\^ateva sute de metri, mobilitatea \^{\i}n cadrul acestor re\c tele fiind restr\^ans\u a. Cu toate acestea au ap\u arut \c si unele tehnologii care permit leg\u aturi f\u ar\u a fir bazate pe standardul 802.11 \^{\i}ntre dou\u a puncte fixe aflate la distan\c te de ordinul sutelor de kilometri. \par
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{6}{|c|}{ Protocoale Wi-Fi} & Nivel OSI & Nivel TCP/IP\\
+\hline
+\multicolumn{6}{|c|}{ LCC (802.2) } & Legatura de date & Gazda-retea\\
+\hline
+\multicolumn{3}{|c|}{ DCF CSMA / CA MAC } & \multicolumn{3}{|c|}{ PCF MAC } & Legatura de date & Gazda-retea\\
+\hline
+\multicolumn{6}{|c|}{  } & Legatura de date & Gazda-retea\\
+\hline
+Infraro\c su & FHSS & DSSS & OFDM (802.11a) & HR-DSSS (802.11b) & 802.11g & Fizic & Gazda-retea\\
+\hline
+\end{tabular} 
+\end{center}
+
+\section{Tipuri de echipamente}
+Echipamentele de transmisie/recepție fără fir sunt de obicei de două tipuri:
+\begin{itemize}
+\item stații bază (Base Stations, BS)
+\item stații client (Subscriber Units, SU)
+\end{itemize}
+
+Stațiile bază au deschiderea antenei de obicei de la 60 până la 360 de grade, asigurând conectivitatea clienților pe o anumită arie. Ele pot fi legate la o rețea cablată prin fibră optică, cabluri metalice sau chiar relee radio. Stațiile client au antene cu deschidere mult mai mică și trebuie orientate spre BS-uri. Subnivelul Media Access Control (MAC) are următoarele sarcini:
+\begin{enumerate}
+\item Pentru stațiile client
+\begin{enumerate}[a)]
+\item Autentificare (înregistrare în condiții sigure)
+\item Deautentificare (dezînregistrare în condiții sigure)
+\item Transmisie în condiții de siguranță
+\item Livrare de MAC Service Data Units (MSDU) între echipamentele wireless
+\end{enumerate}
+\item Pentru stațiile bază:
+\begin{enumerate}[a)]
+\item Asociere (înregistrare)
+\item Deasociere (dezînregistrare)
+\item Distribuție de cadre MAC
+\item Integrare (rețeaua existentă wireless poate comunica cu rețele bazate pe alt tip de tehnologie wireless)
+\item Reasociere (suportă cedarea dinamică a clienților unui alt BS, precum și comunicația cu alte BS)
+\end{enumerate}
+\end{enumerate}
+
+\begin{thebibliography}{99}
+\bibitem{} https://ro.wikipedia.org/wiki/Wi-Fi
+\end{thebibliography}
+\end{document}
